@@ -1,0 +1,457 @@
+#:import Snackbar kivymd.uix.snackbar.Snackbar
+
+<Separator@Widget>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, .4
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<HSeparator@Separator>:
+    size_hint_y: None
+    height: dp(1)
+
+<MySeparator@Widget>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<HoSeparator@MySeparator>:
+    size_hint_y: None
+    height: dp(1)
+
+
+<Home>:
+    BoxLayout:
+        id: Home
+        orientation: 'vertical'
+        spacing: 20
+        padding: [10,15,10,10]
+
+        MDToolbar:
+			title: 'Tester'
+            right_action_items: [["logout",lambda x: root.disconnect()]]
+            elevation: 8
+            font_size: 16
+        #Widget:
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            type:['content']
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y:None
+                height: self.minimum_height
+                #pos_hint: {"center_x": .55,"center_y": .5}
+                spacing:10
+
+                Label:
+                    text: 'In which year did humans first step on moon?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que1
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans1
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'What is th the value of euler\'s number(upto 2 decimal places)?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que2
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans2
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'What is the capital of Germany?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que3
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans3
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'What is 3.15 X 4.87?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que4
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans4
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'What is the subnet mask of 192.168.0.0/16 network?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que5
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans5
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'How many bytes is 32 bits?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que6
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans6
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'Establishment year of coep is _____.'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que7
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans7
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'Give an example of MAC address.'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que8
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans8
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'What is 1236 + 727?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que9
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans9
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'Which of the following is not an http header?'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'A. Expect'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'B. Accept'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'C. Except'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'D. Accept-Encoding'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                Label:
+                    text: 'Enter your option'
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#0e1574ff")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                TextInput:
+                    id: que10
+                    multiline:False
+                    font_size: '20sp'
+                    font_name: 'Mukta-SemiBold'
+                    background_color: 1,1,1,0.5
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+                    size: dp(250),dp(40)
+
+                Label:
+                    id: ans10
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
+
+                MDRaisedButton:
+                    halign: 'center'
+                    text: 'Submit'
+                    font_size: '20sp'
+                    size_hint_y: None
+                    size_hint_y: None
+                    font_name: 'VarelaRound'
+                    on_release: root.submit(que1.text, que2.text, que3.text, que4.text, que5.text, que6.text, que7.text, que8.text, que9.text, que10.text)
+
+                Label:
+                    id: marks
+                    font_name: 'VarelaRound'
+                    halign: 'center'
+                    font_size: '14sp'
+                    text_size: root.width-14, 14
+                    color: rgba("#ff0000")
+                    size_hint_y:None
+                    size:
+                        self.texture_size
